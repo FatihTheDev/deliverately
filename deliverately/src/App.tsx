@@ -1,17 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter , Routes, Route } from 'react-router-dom';
 import Main from './components/Main/Main.tsx';
-import Nav from './components/Main/Nav.tsx';
+import Header from "./components/Main/Header.tsx"
+import Nav from './Nav.tsx';
+import OrderForm from "./OrderForm";
+import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Nav />
+      <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        {}
+        <Route path="/order" element={<OrderForm/>} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
