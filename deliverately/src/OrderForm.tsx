@@ -4,7 +4,7 @@ import { useState } from "react"
 export default function OrderForm(){
 
     const [quantity, setQuantity] = useState<number>(0);
-    const [name, setName] = useState<string>("danny");
+    const [name, setName] = useState<string>("");
     const [user, setUser] = useState<string>("");
     const [email, setEmail] = useState<string>("");
     const [pass1, setPass1] = useState<string>("");
